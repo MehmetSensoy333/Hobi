@@ -1,0 +1,14 @@
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\Jupiter.DAL.dll.config
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\Jupiter.DAL.dll
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\Jupiter.DAL.pdb
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\Jupiter.DTO.dll
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\Jupiter.DTO.pdb
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\obj\Debug\Jupiter.DAL.csprojAssemblyReference.cache
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\obj\Debug\Jupiter.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\obj\Debug\Jupiter.DAL.csproj.CopyComplete
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\obj\Debug\Jupiter.DAL.dll
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DAL\obj\Debug\Jupiter.DAL.pdb

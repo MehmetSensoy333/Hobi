@@ -1,0 +1,6 @@
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DTO\bin\Debug\Jupiter.DTO.dll
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DTO\bin\Debug\Jupiter.DTO.pdb
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DTO\obj\Debug\Jupiter.DTO.csprojAssemblyReference.cache
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DTO\obj\Debug\Jupiter.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DTO\obj\Debug\Jupiter.DTO.dll
+C:\Users\Section1\Source\Workspaces\Jupiter\Jupiter\Jupiter.DTO\obj\Debug\Jupiter.DTO.pdb

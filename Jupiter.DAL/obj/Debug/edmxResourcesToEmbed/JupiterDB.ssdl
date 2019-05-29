@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JupiterDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Hobbies">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HobbyName" Type="varchar" MaxLength="20" />
+    <Property Name="UpperID" Type="int" />
+  </EntityType>
+  <EntityType Name="Phone">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User_Hobby">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="HobbyID" Type="int" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TCNo" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="PassaportNo" Type="char" MaxLength="9" />
+    <Property Name="FirstName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Gender" Type="tinyint" />
+    <Property Name="Birthdate" Type="date" />
+    <Property Name="Email" Type="varchar" MaxLength="35" />
+    <Property Name="Adress" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Hobbies_Hobbies">
+    <End Role="Hobbies" Type="Self.Hobbies" Multiplicity="0..1" />
+    <End Role="Hobbies1" Type="Self.Hobbies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hobbies">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Hobbies1">
+        <PropertyRef Name="UpperID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phone_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Phone" Type="Self.Phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Phone">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Hobby_Hobbies">
+    <End Role="Hobbies" Type="Self.Hobbies" Multiplicity="1" />
+    <End Role="User_Hobby" Type="Self.User_Hobby" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hobbies">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User_Hobby">
+        <PropertyRef Name="HobbyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Hobby_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="User_Hobby" Type="Self.User_Hobby" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User_Hobby">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JupiterDBModelStoreContainer">
+    <EntitySet Name="Hobbies" EntityType="Self.Hobbies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Phone" EntityType="Self.Phone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Hobby" EntityType="Self.User_Hobby" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Hobbies_Hobbies" Association="Self.FK_Hobbies_Hobbies">
+      <End Role="Hobbies" EntitySet="Hobbies" />
+      <End Role="Hobbies1" EntitySet="Hobbies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phone_Users" Association="Self.FK_Phone_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Phone" EntitySet="Phone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Hobby_Hobbies" Association="Self.FK_User_Hobby_Hobbies">
+      <End Role="Hobbies" EntitySet="Hobbies" />
+      <End Role="User_Hobby" EntitySet="User_Hobby" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Hobby_Users" Association="Self.FK_User_Hobby_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="User_Hobby" EntitySet="User_Hobby" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
